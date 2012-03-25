@@ -16,16 +16,39 @@ QLOCKTWO = require('./qlocktwo')
 # console.log clock.render()
 # console.log ''
 
-d = new Date
 
-options = 
-  date:   d
-  locale: require('./locales/it')
+# d = new Date
 
-clock = new QLOCKTWO(options)
+# options = 
+#   date:   d
+#   locale: require('./locales/it')
 
-for hours in [0..11]
-  clock.date.setHours hours
-  for minutes in [0..59] by 5
-    clock.date.setMinutes minutes
-    console.log clock.render()
+# clock = new QLOCKTWO(options)
+
+# console.log clock.render()
+
+# clock.on 'date_changed', (date) ->
+#   console.log "date changed! Actual date is: #{date}"
+
+
+# clock.set_time 'ciao'
+
+# for hours in [0..11]
+#   clock.date.setHours hours
+#   for minutes in [0..59] by 5
+#     clock.date.setMinutes minutes
+#     console.log clock.render()
+
+
+# process.stdout.write "foo\rbar"
+# process.stdout.write "\rasdd"
+# process.stdout.write "\rgtotmop"
+# process.stdout.write "\rvo"
+
+while true
+  setTimeout( () ->
+    console.log 'ciao',
+  1000)
+
+# for i in [0..10]
+#   console.log "\u000D%s: %d", "One moment please", i
